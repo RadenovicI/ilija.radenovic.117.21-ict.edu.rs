@@ -333,7 +333,7 @@ window.addEventListener("load",function(){
     // }
 
     document.getElementById("forma-dugme").addEventListener("click",function(){
-        var regExIme = /^([A-Z][a-z]{2,15})\s([A-z][a-z]{2,15})$/;
+        var regExIme = /^([A-ZŠĐĆČŽ][a-zšđćčž]{2,15})\s([A-ZŠĐĆČŽ][a-zšđćčž]{2,15})$/;
         var regExMail = /^[a-z]{2,10}\.[a-z]{2,10}(@gmail.com)$/;
         var poljeIme = document.getElementById("ime");
         var poljeMail = document.getElementById("mail");
