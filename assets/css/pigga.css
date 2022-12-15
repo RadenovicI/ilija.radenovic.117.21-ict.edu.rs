@@ -11563,3 +11563,18 @@ section.has-img-bg:after {
   height: 230px;
   width: 230px;
 }
+
+.sakrij{
+  display: none;
+}
+#navigation{
+  margin-left: 40%;
+}
+#container{
+  margin-bottom: 253px;
+  padding-left: 35%;
+}
+#container img{
+  width: 320px;
+  height: 400px;
+}

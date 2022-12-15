@@ -1,8 +1,10 @@
 window.addEventListener("load",function(){
-   
+    path=window.location.pathname;
+    
+    
     //navigacija
-    var navLinkovi = new Array("#about","#service","#team","#testmonial");
-    var navTekst = new Array("O nama","Najtraženije","Osoblje","Utisci");
+    var navLinkovi = new Array("about.html","#service","#team","#testmonial");
+    var navTekst = new Array("O autoru","Najtraženije","Osoblje","Utisci");
     var ispis="";
     for(let i=0;i<navLinkovi.length;i++){
         ispis+= `<li class="nav-item">
@@ -11,7 +13,7 @@ window.addEventListener("load",function(){
     }
     document.querySelector("#navbar-center").innerHTML=ispis;
 
-})
+
     //header
     var header=document.querySelector("#header-block")
 
@@ -274,6 +276,118 @@ window.addEventListener("load",function(){
         divMeniBlok.innerHTML=meniBlok;
         meniBlok= `<div class="row text-left">`
     })
-    }
-    
 
+    // var regExIme = /^([A-Z][a-z]{2,15})\s([A-z][a-z]{2,15})$/;
+    // var regExMail = /^[a-z]{2,10}\.[a-z]{2,10}(@gmail.com)$/;
+    // var poljeIme = document.getElementById("ime");
+    // var poljeMail = document.getElementById("mail");
+    // var gradLista = document.getElementById("lista");
+    // var checkDugme = document.getElementById("check-button")
+    // var greske=0;
+
+    // poljeIme.addEventListener("blur",function(){
+    //     if(!regExIme.test(poljeIme.value)){
+    //         document.getElementById("ime-obavestenje").classList.remove("sakrij");
+    //         greske++;
+    //         console.log(greske);
+    //     }
+    //     else{
+    //         document.getElementById("ime-obavestenje").classList.add("sakrij");
+    //         greske--;
+    //         console.log(greske);
+    //     }
+    // })
+
+    // poljeMail.addEventListener("blur",function(){
+    //     if(!regExMail.test(poljeMail.value)){
+    //         document.getElementById("mail-obavestenje").classList.remove("sakrij");
+    //         greske++;
+    //         console.log(greske);
+    //     }
+    //     else{
+    //         document.getElementById("mail-obavestenje").classList.add("sakrij");greske--;
+    //         console.log(greske);
+    //     }
+    // })
+
+    // gradLista.addEventListener("blur",function(){
+    //     if(gradLista.value==0){
+    //         document.getElementById("lista-obavestenje").classList.remove("sakrij");
+    //         greske++;
+    //         console.log(greske);
+    //     }
+    //     else{
+    //         document.getElementById("lista-obavestenje").classList.add("sakrij");
+    //         greske--;
+    //         console.log(greske);
+    //     }
+    // })
+    
+    // if (checkDugme.checked){
+    //     document.getElementById("check-obavestenje").classList.remove("sakrij");
+    // }
+    // else {document.getElementById("check-obavestenje").classList.add("sakrij");}
+
+    // if(greske==0){
+    //     document.getElementById("forma-dugme").removeAttribute(disabled="disabled");
+    // }
+
+    document.getElementById("forma-dugme").addEventListener("click",function(){
+        var regExIme = /^([A-Z][a-z]{2,15})\s([A-z][a-z]{2,15})$/;
+        var regExMail = /^[a-z]{2,10}\.[a-z]{2,10}(@gmail.com)$/;
+        var poljeIme = document.getElementById("ime");
+        var poljeMail = document.getElementById("mail");
+        var gradLista = document.getElementById("lista");
+        var checkDugme = document.getElementById("check-button").checked
+        var greske=0;
+        var pom=1
+
+            if(!regExIme.test(poljeIme.value)){
+                document.getElementById("ime-obavestenje").classList.remove("sakrij");
+                pom=1;
+            }
+            else{
+                document.getElementById("ime-obavestenje").classList.add("sakrij");
+                pom=0;
+            }
+            greske+=pom;
+            pom=1;
+            if(!regExMail.test(poljeMail.value)){
+                document.getElementById("mail-obavestenje").classList.remove("sakrij");
+                pom=1
+            }
+            else{
+                document.getElementById("mail-obavestenje").classList.add("sakrij");
+                pom=0
+            }
+            greske+=pom;
+            pom=1;
+            if(gradLista.value==0){
+                document.getElementById("lista-obavestenje").classList.remove("sakrij");
+                pom=1;
+            }
+            else{
+                document.getElementById("lista-obavestenje").classList.add("sakrij");
+                pom=0
+            }
+            greske+=pom;
+            pom=1;
+
+
+            if (!checkDugme){
+            document.getElementById("check-obavestenje").classList.remove("sakrij");
+            pom=1;
+            }
+            else {
+                document.getElementById("check-obavestenje").classList.add("sakrij");
+                pom=0;
+            }
+            greske+=pom;
+            pom=1;
+            if(greske==0){
+            document.getElementById("uspesno").classList.remove("sakrij");pom=1;
+            }
+            else{document.getElementById("uspesno").classList.add("sakrij");pom=0;}
+    })
+}
+})
