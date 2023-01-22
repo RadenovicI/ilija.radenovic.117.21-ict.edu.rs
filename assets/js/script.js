@@ -1,7 +1,5 @@
 window.addEventListener("load",function(){
-    path=window.location.pathname;
-    
-    
+    document.getElementById("forma").reset();
     //navigacija
     var navLinkovi = new Array("about.html","#service","#team","#testmonial");
     var navTekst = new Array("O autoru","Najtraženije","Osoblje","Utisci");
@@ -15,7 +13,7 @@ window.addEventListener("load",function(){
 
 
     //header
-    var header=document.querySelector("#header-block")
+    var header=document.querySelector("#header-block");
 
     var slika = document.createElement("img");
     slika.setAttribute("src","assets/imgs/logo.jpg");
@@ -39,20 +37,19 @@ window.addEventListener("load",function(){
     var radnoVremeDaniAbout = new Array("Ponedeljak-Petak: ","Subota: ","Nedelja: ");
     var radnoVremeAbout=new Array("08:00 - 23:00","12:00 - 00:00","Zatvoreno");
     var ispis=""
-    for(i=0;i<radnoVremeDaniAbout.length;i++){
-        if(i==0){
-            ispis+=`<h3 class="section-title">Radno vreme:</h3>`
-            ispis+=`<p class="mb-1 font-weight-bold">${radnoVremeDaniAbout[i]}<span class="font-weight-normal pl-2 text-muted">${radnoVremeAbout[i]}</span></p>`
+        for(i=0;i<radnoVremeDaniAbout.length;i++){
+            if(i==0){
+                ispis+=`<h3 class="section-title">Radno vreme:</h3>`
+                ispis+=`<p class="mb-1 font-weight-bold">${radnoVremeDaniAbout[i]}<span class="font-weight-normal pl-2 text-muted">${radnoVremeAbout[i]}</span></p>`
+            }
+            else{ispis+=`<p class="mb-1 font-weight-bold">${radnoVremeDaniAbout[i]}<span class="font-weight-normal pl-2 text-muted">${radnoVremeAbout[i]}</span></p>`}
+            document.getElementById("about-top-left").innerHTML = ispis;
         }
-        else{ispis+=`<p class="mb-1 font-weight-bold">${radnoVremeDaniAbout[i]}<span class="font-weight-normal pl-2 text-muted">${radnoVremeAbout[i]}</span></p>`}
-        document.getElementById("about-top-left").innerHTML = ispis;
     
-    }
-    
-    var nizSlikeLinkovi = new Array("assets/imgs/pizza.jpg",    "assets/imgs/hotdog.jpg","assets/imgs/sandwich-open.jpg","assets/imgs/sandwich.jpg")
-    var nizSlikeAlt = new Array("Pica","Hot Dog","Rol Sendvič - otvoren","Rol Sendvič")
-    var ispis="";
-    for(let i in nizSlikeAlt){
+        var nizSlikeLinkovi = new Array("assets/imgs/pizza.jpg",    "assets/imgs/hotdog.jpg","assets/imgs/sandwich-open.jpg","assets/imgs/sandwich.jpg")
+        var nizSlikeAlt = new Array("Pica","Hot Dog","Rol Sendvič - otvoren","Rol Sendvič")
+        var ispis="";
+        for(let i in nizSlikeAlt){
         if(i==2 || i==3){
             ispis+=`<div class="col">
             <img alt="${nizSlikeAlt[i]}" src="${nizSlikeLinkovi[i]}" class="square-size" class="w-100 rounded shadow">
@@ -63,11 +60,11 @@ window.addEventListener("load",function(){
         else{
         ispis+=`<div class="col">
         <img alt="${nizSlikeAlt[i]}" src="${nizSlikeLinkovi[i]}" class="square-size" class="w-100 rounded shadow">
-    </div>`;
-    document.getElementById("about-top-right").innerHTML = ispis;
+        </div>`;
+        document.getElementById("about-top-right").innerHTML = ispis;
         if(i==1) {ispis=""};
         }
-
+        }
 
         //izdvojeno - najtraženije
         var nizSlikeFeatured = new Array("assets/imgs/burger.jpg",
@@ -163,12 +160,12 @@ window.addEventListener("load",function(){
                     </div>
                 </div>
             </div>`
-            }
-            
-           
+            } 
         }
         
-        document.getElementById("menu-block").innerHTML = meniBlok
+        meniBlok+=`</div>`
+        divMeniBlok.innerHTML=meniBlok;
+        meniBlok= `<div class="row text-left">`
 
         dugmePizza.addEventListener("click",function(){
         dugmePizza.setAttribute("disabled","disabled");
@@ -222,172 +219,141 @@ window.addEventListener("load",function(){
         meniBlok+=`</div>`
         divMeniBlok.innerHTML=meniBlok;
         meniBlok= `<div class="row text-left">`
-    })
-    dugmeSandwich.addEventListener("click",function(){
-        dugmeSandwich.setAttribute("disabled","disabled");
-        dugmePizza.removeAttribute(disabled="disabled");
-        for(let i=0;i<6;i++){
-            let pizzaIme=new Array("<b>Šunka</b>", "<b>Pečenica</b>", "<b>Kulen</b>", "<b>Mix</b>", "<b>Slaninica</b>", "<b>Piletina</b>");
-            let pizzaOpis=new Array("namaz, šunka, sir,         krastavčići", 
-                                    "namaz, pečenica, sir, krastavčići", 
-                                    "namaz, kulen, sir, krastavčići", 
-                                    "namaz, šunka, kulen, pečenica, sir, krastavčići",
-                                    "pavlaka, sir, kuvano jaje, paradajz", 
-                                    "susam namaz, pileći file, sir, krastavčići");
-            let pizzaCena=new Array("180 rsd",
-                                    "200 rsd",
-                                    "210 rsd",
-                                    "250 rsd",
-                                    "300 rsd",
-                                    "320 rsd");
-    
-            if(i>2){
+        })
+        dugmeSandwich.addEventListener("click",function(){
+            dugmeSandwich.setAttribute("disabled","disabled");
+            dugmePizza.removeAttribute(disabled="disabled");
+            for(let i=0;i<6;i++){
+                let pizzaIme=new Array("<b>Šunka</b>", "<b>Pečenica</b>", "<b>Kulen</b>", "<b>Mix</b>", "<b>Slaninica</b>", "<b>Piletina</b>");
+                let pizzaOpis=new Array("namaz, šunka, sir,         krastavčići", 
+                                        "namaz, pečenica, sir, krastavčići", 
+                                        "namaz, kulen, sir, krastavčići", 
+                                        "namaz, šunka, kulen, pečenica, sir, krastavčići",
+                                        "pavlaka, sir, kuvano jaje, paradajz", 
+                                        "susam namaz, pileći file, sir, krastavčići");
+                let pizzaCena=new Array("180 rsd",
+                                        "200 rsd",
+                                        "210 rsd",
+                                        "250 rsd",
+                                        "300 rsd",
+                                        "320 rsd");
+        
+                if(i>2){
+                    meniBlok+=
+                `<div class="col-md-6 my-4">
+                    <div class="pb-3 mx-3 d-block text-dark text-decoration-none border border-left-0 border-top-0 border-right-0">
+                        <div class="d-flex">
+                            <div class="flex-grow-1">${pizzaIme[i]}
+                                <p class="mt-2 mb-0">${pizzaOpis[i]}</p>
+                            </div>
+                                    <h6 class="float-right text-primary">${pizzaCena[i]}</h6>
+                            
+                        </div>
+                    </div>
+                </div>`
+                }
+                else{
                 meniBlok+=
-            `<div class="col-md-6 my-4">
-                <div class="pb-3 mx-3 d-block text-dark text-decoration-none border border-left-0 border-top-0 border-right-0">
-                    <div class="d-flex">
-                        <div class="flex-grow-1">${pizzaIme[i]}
-                            <p class="mt-2 mb-0">${pizzaOpis[i]}</p>
+                `<div class="col-md-6 my-4">
+                    <div class="pb-3 mx-3 d-block text-dark text-decoration-none border border-left-0 border-top-0 border-right-0">
+                        <div class="d-flex">
+                            <div class="flex-grow-1">${pizzaIme[i]}
+                                <p class="mt-1 mb-0">${pizzaOpis[i]}</p>
+                            </div>
+                                    <h6 class="float-right text-primary">${pizzaCena[i]}</h6>
+                            
                         </div>
-                                <h6 class="float-right text-primary">${pizzaCena[i]}</h6>
-                        
                     </div>
-                </div>
-            </div>`
-            }                       
-            else{
-            meniBlok+=
-            `<div class="col-md-6 my-4">
-                <div class="pb-3 mx-3 d-block text-dark text-decoration-none border border-left-0 border-top-0 border-right-0">
-                    <div class="d-flex">
-                        <div class="flex-grow-1">${pizzaIme[i]}
-                            <p class="mt-1 mb-0">${pizzaOpis[i]}</p>
-                        </div>
-                                <h6 class="float-right text-primary">${pizzaCena[i]}</h6>
-                        
-                    </div>
-                </div>
-            </div>`
+                </div>`
+                }
             }
-            
-           
-        }
-        meniBlok+=`</div>`
-        divMeniBlok.innerHTML=meniBlok;
-        meniBlok= `<div class="row text-left">`
-    })
-
-    // var regExIme = /^([A-Z][a-z]{2,15})\s([A-z][a-z]{2,15})$/;
-    // var regExMail = /^[a-z]{2,10}\.[a-z]{2,10}(@gmail.com)$/;
-    // var poljeIme = document.getElementById("ime");
-    // var poljeMail = document.getElementById("mail");
-    // var gradLista = document.getElementById("lista");
-    // var checkDugme = document.getElementById("check-button")
-    // var greske=0;
-
-    // poljeIme.addEventListener("blur",function(){
-    //     if(!regExIme.test(poljeIme.value)){
-    //         document.getElementById("ime-obavestenje").classList.remove("sakrij");
-    //         greske++;
-    //         console.log(greske);
-    //     }
-    //     else{
-    //         document.getElementById("ime-obavestenje").classList.add("sakrij");
-    //         greske--;
-    //         console.log(greske);
-    //     }
-    // })
-
-    // poljeMail.addEventListener("blur",function(){
-    //     if(!regExMail.test(poljeMail.value)){
-    //         document.getElementById("mail-obavestenje").classList.remove("sakrij");
-    //         greske++;
-    //         console.log(greske);
-    //     }
-    //     else{
-    //         document.getElementById("mail-obavestenje").classList.add("sakrij");greske--;
-    //         console.log(greske);
-    //     }
-    // })
-
-    // gradLista.addEventListener("blur",function(){
-    //     if(gradLista.value==0){
-    //         document.getElementById("lista-obavestenje").classList.remove("sakrij");
-    //         greske++;
-    //         console.log(greske);
-    //     }
-    //     else{
-    //         document.getElementById("lista-obavestenje").classList.add("sakrij");
-    //         greske--;
-    //         console.log(greske);
-    //     }
-    // })
-    
-    // if (checkDugme.checked){
-    //     document.getElementById("check-obavestenje").classList.remove("sakrij");
-    // }
-    // else {document.getElementById("check-obavestenje").classList.add("sakrij");}
-
-    // if(greske==0){
-    //     document.getElementById("forma-dugme").removeAttribute(disabled="disabled");
-    // }
+            meniBlok+=`</div>`
+            divMeniBlok.innerHTML=meniBlok;
+            meniBlok= `<div class="row text-left">`
+        })
 
     document.getElementById("forma-dugme").addEventListener("click",function(){
         var regExIme = /^([A-ZŠĐĆČŽ][a-zšđćčž]{2,15})\s([A-ZŠĐĆČŽ][a-zšđćčž]{2,15})$/;
         var regExMail = /^[a-z]{2,10}\.[a-z]{2,10}(@gmail.com)$/;
-        var poljeIme = document.getElementById("ime");
-        var poljeMail = document.getElementById("mail");
-        var gradLista = document.getElementById("lista");
-        var checkDugme = document.getElementById("check-button").checked
+
+        function prikazivanjeDivaZaObavestenje(obavestenje){
+            document.getElementById(obavestenje).classList.remove("sakrij");
+        }
+        function sakrivanjeDivaZaObavestenje(obavestenje){
+            document.getElementById(obavestenje).classList.add("sakrij");
+        }
+
+        var poljeIme = document.getElementById("ime").value;
+        console.log(poljeIme);
+        var poljeMail = document.getElementById("mail").value;
+        var gradLista = document.getElementById("lista").value;
+        var polRadio = document.getElementsByName("flexRadioDefault");
+        var checkDugme = document.getElementById("check-button").checked;
         var greske=0;
         var pom=1
+        if(!regExIme.test(poljeIme)){
+            prikazivanjeDivaZaObavestenje("ime-obavestenje");
+            pom=1;
+        }
+        else{
+            sakrivanjeDivaZaObavestenje("ime-obavestenje");
+            pom=0;
+        }
+        greske+=pom;
+        pom=1;
+        if(!regExMail.test(poljeMail)){
+            prikazivanjeDivaZaObavestenje("mail-obavestenje");
+            pom=1
+        }
+        else{
+            sakrivanjeDivaZaObavestenje("mail-obavestenje");
+            pom=0
+        }
+        greske+=pom;
+        pom=1;
+        if(gradLista==0){
+            prikazivanjeDivaZaObavestenje("lista-obavestenje");
+            pom=1;
+        }
+        else{
+            sakrivanjeDivaZaObavestenje("lista-obavestenje");
+            pom=0
+        }
 
-            if(!regExIme.test(poljeIme.value)){
-                document.getElementById("ime-obavestenje").classList.remove("sakrij");
+        greske+=pom;
+        pom=1;
+        
+        for(var i=0;i<polRadio.length;i++){
+            if(!polRadio[0].checked && !polRadio[1].checked){
                 pom=1;
-            }
-            else{
-                document.getElementById("ime-obavestenje").classList.add("sakrij");
-                pom=0;
-            }
-            greske+=pom;
-            pom=1;
-            if(!regExMail.test(poljeMail.value)){
-                document.getElementById("mail-obavestenje").classList.remove("sakrij");
-                pom=1
-            }
-            else{
-                document.getElementById("mail-obavestenje").classList.add("sakrij");
-                pom=0
-            }
-            greske+=pom;
-            pom=1;
-            if(gradLista.value==0){
-                document.getElementById("lista-obavestenje").classList.remove("sakrij");
-                pom=1;
-            }
-            else{
-                document.getElementById("lista-obavestenje").classList.add("sakrij");
-                pom=0
-            }
-            greske+=pom;
-            pom=1;
-
-
-            if (!checkDugme){
-            document.getElementById("check-obavestenje").classList.remove("sakrij");
-            pom=1;
+                prikazivanjeDivaZaObavestenje("pol-radio-obavestenje")
             }
             else {
-                document.getElementById("check-obavestenje").classList.add("sakrij");
+                sakrivanjeDivaZaObavestenje("pol-radio-obavestenje");
                 pom=0;
             }
-            greske+=pom;
-            pom=1;
-            if(greske==0){
-            document.getElementById("uspesno").classList.remove("sakrij");pom=1;
-            }
-            else{document.getElementById("uspesno").classList.add("sakrij");pom=0;}
+        }
+
+        greske+=pom;
+        pom=1;
+        if (!checkDugme){
+            prikazivanjeDivaZaObavestenje("check-obavestenje");
+        pom=1;
+        }
+        else {
+            sakrivanjeDivaZaObavestenje("check-obavestenje");
+            pom=0;
+        }
+        greske+=pom;
+        pom=1;
+        if(greske==0){
+        prikazivanjeDivaZaObavestenje("uspesno");
+        prikazivanjeDivaZaObavestenje("loading-plugin")
+        setTimeout(function(){window.location.reload(1)},3000);
+        pom=1;
+        }
+        else{
+            document.getElementById("uspesno").classList.add("sakrij");pom=0;
+        }
     })
-}
 })
