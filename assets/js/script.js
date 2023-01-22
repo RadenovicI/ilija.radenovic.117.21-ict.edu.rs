@@ -348,7 +348,7 @@ window.addEventListener("load",function(){
         pom=1;
         if(greske==0){
         prikazivanjeDivaZaObavestenje("uspesno");
-        prikazivanjeDivaZaObavestenje("loading-plugin")
+        prikazivanjeDivaZaObavestenje("loading-plugin");
         setTimeout(function(){window.location.reload(1)},3000);
         pom=1;
         }
