@@ -283,6 +283,7 @@ window.addEventListener("load",function(){
             document.getElementById(obavestenje).classList.add("sakrij");
         }
 
+        
         var poljeIme = document.getElementById("ime").value;
         console.log(poljeIme);
         var poljeMail = document.getElementById("mail").value;

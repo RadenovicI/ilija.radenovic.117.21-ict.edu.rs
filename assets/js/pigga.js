@@ -20,6 +20,7 @@ $(document).ready(function(){
 
             event.preventDefault();
 
+            
             var hash = this.hash;
 
             $('html, body').animate({

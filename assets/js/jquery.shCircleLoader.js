@@ -20,6 +20,7 @@
             sel.find("." + defaultNamespace).detach();
             return;
 
+            
         // Show progress status into the center
         } else if ((first === "progress") && (typeof second !== "undefined")) {
             sel.each(function() {
