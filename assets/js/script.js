@@ -1,5 +1,6 @@
 window.addEventListener("load",function(){
     document.getElementById("forma").reset();
+    
     //navigacija
     var navLinkovi = new Array("about.html","#service","#team","#testmonial");
     var navTekst = new Array("O autoru","Najtraženije","Osoblje","Utisci");
@@ -42,7 +43,8 @@ window.addEventListener("load",function(){
                 ispis+=`<h3 class="section-title">Radno vreme:</h3>`
                 ispis+=`<p class="mb-1 font-weight-bold">${radnoVremeDaniAbout[i]}<span class="font-weight-normal pl-2 text-muted">${radnoVremeAbout[i]}</span></p>`
             }
-            else{ispis+=`<p class="mb-1 font-weight-bold">${radnoVremeDaniAbout[i]}<span class="font-weight-normal pl-2 text-muted">${radnoVremeAbout[i]}</span></p>`}
+            else{
+                ispis+=`<p class="mb-1 font-weight-bold">${radnoVremeDaniAbout[i]}<span class="font-weight-normal pl-2 text-muted">${radnoVremeAbout[i]}</span></p>`}
             document.getElementById("about-top-left").innerHTML = ispis;
         }
     
@@ -94,22 +96,6 @@ window.addEventListener("load",function(){
         </div>`
         }
         document.getElementById("block-featured").innerHTML=ispisFeatured;
-
-        var radnikSlika = new Array("assets/imgs/chef-1.jpg","assets/imgs/chef-2.jpg","assets/imgs/chef-3.jpg");
-        var radnikSlikaAlt = new Array("Pizza Majstor","Pomoćni radnik 1","Pomoćni radnik 2");
-        var radnikIme = new Array("Marko Marković","Marija Marić","Aleksandar Andrić");
-        var radnikOpis = new Array("Pica majstor po struci i malo je reći iskusan u svom poslu. Dodatan rad i iskustvo u inostranstvu doprinosi boljem kvalitetu testa i brzini pripreme svakog jela, a pritom kvalitet i ukus ostaju nenadmašivi","Pomoćni radnik ali jednako bitan član našeg kolektiva. Svaki rol-sendvič ima dozu umerenosti, ali i savršenstva zbog njenog truda i želje da svaki bude isti kao i prethodni.","Za razliku od ostalih radnika koji su radili u inostranstvu, naš pomoćni pica majstor se dobro uklapa u rad sa ostatkom radnog osoblja. Još uvek u obuci, ali kompetentan po pitanju veština.");
-        var ispisRadnici = "";
-        for (let i = 0;i<radnikSlika.length;i++){
-            ispisRadnici += `<div class="col-md-4 my-3">
-            <div class="team-wrapper text-center">
-                <img src="${radnikSlika[i]}" class="circle-120 rounded-circle mb-3 shadow" alt="${radnikSlikaAlt[i]}">
-                <h5 class="my-3">${radnikIme[i]}</h5>
-                <p>${radnikOpis[i]}</p>
-            </div>
-        </div>`
-        }
-        document.getElementById("block-staff").innerHTML = ispisRadnici;
 
         //jelovnik
 
@@ -271,90 +257,121 @@ window.addEventListener("load",function(){
             divMeniBlok.innerHTML=meniBlok;
             meniBlok= `<div class="row text-left">`
         })
-
-    document.getElementById("forma-dugme").addEventListener("click",function(){
-        var regExIme = /^([A-ZŠĐĆČŽ][a-zšđćčž]{2,15})\s([A-ZŠĐĆČŽ][a-zšđćčž]{2,15})$/;
-        var regExMail = /^[a-z]{2,10}\.[a-z]{2,10}(@gmail.com)$/;
-
-        function prikazivanjeDivaZaObavestenje(obavestenje){
-            document.getElementById(obavestenje).classList.remove("sakrij");
-        }
-        function sakrivanjeDivaZaObavestenje(obavestenje){
-            document.getElementById(obavestenje).classList.add("sakrij");
-        }
-
         
-        var poljeIme = document.getElementById("ime").value;
-        console.log(poljeIme);
-        var poljeMail = document.getElementById("mail").value;
-        var gradLista = document.getElementById("lista").value;
-        var polRadio = document.getElementsByName("flexRadioDefault");
-        var checkDugme = document.getElementById("check-button").checked;
-        var greske=0;
-        var pom=1
-        if(!regExIme.test(poljeIme)){
-            prikazivanjeDivaZaObavestenje("ime-obavestenje");
-            pom=1;
-        }
-        else{
-            sakrivanjeDivaZaObavestenje("ime-obavestenje");
-            pom=0;
-        }
-        greske+=pom;
-        pom=1;
-        if(!regExMail.test(poljeMail)){
-            prikazivanjeDivaZaObavestenje("mail-obavestenje");
-            pom=1
-        }
-        else{
-            sakrivanjeDivaZaObavestenje("mail-obavestenje");
-            pom=0
-        }
-        greske+=pom;
-        pom=1;
-        if(gradLista==0){
-            prikazivanjeDivaZaObavestenje("lista-obavestenje");
-            pom=1;
-        }
-        else{
-            sakrivanjeDivaZaObavestenje("lista-obavestenje");
-            pom=0
-        }
+        //osoblje
 
-        greske+=pom;
-        pom=1;
-        
-        for(var i=0;i<polRadio.length;i++){
-            if(!polRadio[0].checked && !polRadio[1].checked){
-                pom=1;
-                prikazivanjeDivaZaObavestenje("pol-radio-obavestenje")
+        var radnikSlika = new Array("assets/imgs/chef-1.jpg","assets/imgs/chef-2.jpg","assets/imgs/chef-3.jpg");
+        var radnikSlikaAlt = new Array("Pizza Majstor","Pomoćni radnik 1","Pomoćni radnik 2");
+        var radnikIme = new Array("Marko Marković","Marija Marić","Aleksandar Andrić");
+        var radnikOpis = new Array("Pica majstor po struci i malo je reći iskusan u svom poslu. Dodatan rad i iskustvo u inostranstvu doprinosi boljem kvalitetu testa i brzini pripreme svakog jela, a pritom kvalitet i ukus ostaju nenadmašivi","Pomoćni radnik ali jednako bitan član našeg kolektiva. Svaki rol-sendvič ima dozu umerenosti, ali i savršenstva zbog njenog truda i želje da svaki bude isti kao i prethodni.","Za razliku od ostalih radnika koji su radili u inostranstvu, naš pomoćni pica majstor se dobro uklapa u rad sa ostatkom radnog osoblja. Još uvek u obuci, ali kompetentan po pitanju veština.");
+        var ispisRadnici = "";
+        for (let i = 0;i<radnikSlika.length;i++){
+            ispisRadnici += `<div class="col-md-4 my-3">
+            <div class="team-wrapper text-center">
+                <img src="${radnikSlika[i]}" class="circle-120 rounded-circle mb-3 shadow" alt="${radnikSlikaAlt[i]}">
+                <h5 class="my-3">${radnikIme[i]}</h5>
+                <p>${radnikOpis[i]}</p>
+            </div>
+        </div>`
+        }
+        document.getElementById("block-staff").innerHTML = ispisRadnici;
+
+        //forma
+    
+        document.getElementById("forma-dugme").addEventListener("click",function(){
+            var regExIme = /^([A-ZŠĐĆČŽ][a-zšđćčž]{2,15})\s([A-ZŠĐĆČŽ][a-zšđćčž]{2,15})$/;
+            var regExMail = /^[a-z]{2,10}\.[a-z]{2,10}(@gmail.com)$/;
+            var regExPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
+
+            function prikazivanjeDivaZaObavestenje(obavestenje){
+                document.getElementById(obavestenje).classList.remove("sakrij");
             }
-            else {
-                sakrivanjeDivaZaObavestenje("pol-radio-obavestenje");
+            function sakrivanjeDivaZaObavestenje(obavestenje){
+                document.getElementById(obavestenje).classList.add("sakrij");
+            }
+
+            
+            var poljeIme = document.getElementById("ime").value;
+            var poljePass = document.getElementById("password").value;
+            var poljeMail = document.getElementById("mail").value;
+            var gradLista = document.getElementById("lista").value;
+            var polRadio = document.getElementsByName("flexRadioDefault");
+            var checkDugme = document.getElementById("check-button").checked;
+            var greske=0;
+            var pom=1
+            if(!regExIme.test(poljeIme)){
+                prikazivanjeDivaZaObavestenje("ime-obavestenje");
+                pom=1;
+            }
+            else{
+                sakrivanjeDivaZaObavestenje("ime-obavestenje");
                 pom=0;
             }
-        }
+            greske+=pom;
+            pom=1;
+            if(!regExMail.test(poljeMail)){
+                prikazivanjeDivaZaObavestenje("mail-obavestenje");
+                pom=1
+            }
+            else{
+                sakrivanjeDivaZaObavestenje("mail-obavestenje");
+                pom=0
+            }
+            greske+=pom;
+            pom=1;
+            if(gradLista==0){
+                prikazivanjeDivaZaObavestenje("lista-obavestenje");
+                pom=1;
+            }
+            else{
+                sakrivanjeDivaZaObavestenje("lista-obavestenje");
+                pom=0
+            }
+            greske+=pom;
+            pom=1;
+            
+            if(!regExPass.test(poljePass)){
+                prikazivanjeDivaZaObavestenje("pass-obavestenje");
+                pom=1;
+            }
+            else{
+                sakrivanjeDivaZaObavestenje("pass-obavestenje");
+                pom=0;
+            }
+            greske+=pom;
+            pom=1;
 
-        greske+=pom;
-        pom=1;
-        if (!checkDugme){
-            prikazivanjeDivaZaObavestenje("check-obavestenje");
-        pom=1;
-        }
-        else {
-            sakrivanjeDivaZaObavestenje("check-obavestenje");
-            pom=0;
-        }
-        greske+=pom;
-        pom=1;
-        if(greske==0){
-        prikazivanjeDivaZaObavestenje("uspesno");
-        prikazivanjeDivaZaObavestenje("loading-plugin");
-        setTimeout(function(){window.location.reload(1)},3000);
-        pom=1;
-        }
-        else{
-            document.getElementById("uspesno").classList.add("sakrij");pom=0;
-        }
-    })
+            for(var i=0;i<polRadio.length;i++){
+                if(!polRadio[0].checked && !polRadio[1].checked){
+                    pom=1;
+                    prikazivanjeDivaZaObavestenje("pol-radio-obavestenje")
+                }
+                else {
+                    sakrivanjeDivaZaObavestenje("pol-radio-obavestenje");
+                    pom=0;
+                }
+            }
+
+            greske+=pom;
+            pom=1;
+            if (!checkDugme){
+                prikazivanjeDivaZaObavestenje("check-obavestenje");
+            pom=1;
+            }
+            else {
+                sakrivanjeDivaZaObavestenje("check-obavestenje");
+                pom=0;
+            }
+            greske+=pom;
+            pom=1;
+            if(greske==0){
+            prikazivanjeDivaZaObavestenje("uspesno");
+            prikazivanjeDivaZaObavestenje("loading-plugin");
+            setTimeout(function(){window.location.reload(1)},3000);
+            pom=1;
+            }
+            else{
+                document.getElementById("uspesno").classList.add("sakrij");pom=0;
+            }
+        })
 })

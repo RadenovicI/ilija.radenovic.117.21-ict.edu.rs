@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with Pigga landing page.">
     <meta name="author" content="Devcrud">
-    <link rel="icon" type="image/x-icon" href="/assets/imgs/logo.ico">
+    <link rel="icon" type="image/x-icon" href="assets/imgs/logo.ico">
     <title>Pizzeria Mamadoo</title>
     <!-- font icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
@@ -44,7 +44,8 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto" id="navbar-center"> 
 
-                    <!-- odradjeno u script.js | linije 116-124 -->
+                    <!-- odradjeno u script.js | linije 5-13 -->
+                    
                     <!-- <li class="nav-item">
                         <a class="nav-link" href="#about">O nama</a>
                     </li>
@@ -58,27 +59,20 @@
                         <a class="nav-link" href="#testmonial">Utisci</a>
                     </li> -->
                 </ul> 
-                <!-- <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a href="components.html" class="btn btn-primary btn-sm">Components</a>
-                    </li>
-                </ul> -->
             </div>
         </div>
     </nav>
+
     <!-- End Of Second Navigation --> 
     <!-- Page Header -->
     <header class="header">
         <div class="overlay" id="header-block">
+            <!-- odradjeno u script.js | linije 17-35 -->
 
-            <!-- odradjeno u script.js | linije 128-146 -->
             <!-- <img src="assets/imgs/logo.jpg" alt="Logo Picerije" class="logo">
             <h1 class="subtitle">Samo najkvalitetnije</h1>
             <h1 class="title">Dobrodošli u našu piceriju</h1> -->
-            <!-- <a class="btn btn-primary mt-3"
-            href="#book-table">Registrujte se</a>   -->
-
-
+            <!-- <a class="btn btn-primary mt-3"-->
         </div>      
     </header>
     <!-- End Of Page Header -->
@@ -89,7 +83,7 @@
                 <div class="col-md-6" id="about-top-left">
                     <!-- <h6 class="section-subtitle">Opening Times</h6> -->
 
-                    <!-- odradjeno u script.js | linije 149-159 -->
+                    <!-- odradjeno u script.js | linije 38-49 -->
                     <!-- <h3 class="section-title">Radno vreme:</h3>
                     <p class="mb-1 font-weight-bold">Ponedeljak - Petak : <span class="font-weight-normal pl-2 text-muted">08:00 - 23:00</span></p>
                     <p class="mb-1 font-weight-bold">Subota : <span class="font-weight-normal pl-2 text-muted">12:00 - 00:00</span></p>
@@ -100,7 +94,7 @@
                 <div class="col-md-6">
                     <div class="row" id="about-top-right">
                         
-                        <!-- ispisano u script.js | linije 161-169 -->
+                        <!-- ispisano u script.js | linije 51-69 -->
                         <!-- <div class="col">
                             <img alt="Pica" src="assets/imgs/pizza.jpg" class="square-size" class="w-100 rounded shadow">
                         </div>
@@ -139,7 +133,7 @@
             <h6 class="section-subtitle text-center">Izdvojeno</h6>
             <h3 class="section-title mb-6 pb-3 text-center">Najtraženije</h3>
             <div class="row" id="block-featured">
-                    <!-- ISPISANO U script.js | linije 181-207 -->
+                <!-- ISPISANO U script.js | linije 72-98 -->
                 <!-- <div class="col-md-6 mb-4">
                     <div class="custom-list">
                         <div class="img-holder">
@@ -253,6 +247,8 @@
 
             </div>
 
+            <!-- ispisano kroz script.js -> linije 102-259 -->
+
             <div class="card bg-light">
                 <div class="card-body px-4 pb-4 text-center" id="menu-block">                   
                     <!-- <div class="row text-left">
@@ -337,6 +333,9 @@
             <h6 class="section-subtitle text-center">Iskusni radnici</h6>
             <h3 class="section-title mb-5 text-center">Temelj našeg posla</h3>
             <div class="row" id="block-staff">
+                
+                <!-- ispisano kroz script.js -> linije 263-277 -->
+
                 <!-- <div class="col-md-4 my-3">
                     <div class="team-wrapper text-center">
                         <img src="assets/imgs/chef-1.jpg" class="circle-120 rounded-circle mb-3 shadow" alt="Pizza Majstor">
@@ -437,6 +436,8 @@
 
 
     <!-- Registration -->
+
+    <!-- obrada forme kroz script.js -> linije 281-376 -->
     <section id="book-table" class="bg-white">
         <div class="container">
             <div class="row align-items-center">
@@ -452,22 +453,20 @@
                             <input class="form-control" type="text" placeholder="Unesite vaše ime i prezime:"  id="ime">
                          </div>
                          <div class="alert alert-danger alert-dismissible fade show sakrij" role="alert" id="ime-obavestenje">
-                            Ime nije u prikladnom formatu, primer: Pera Perić, Luka Lukić.
-                            <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                               <span aria-hidden="true">&times;</span>
-                            </button> -->
+                            Ime i prezime moraju početi velikim slovom i razmaci mogu postojati samo između imena i prezimena, primer: Pera Perić, Luka Lukić.
                             </div>
                         <div class="form-group">
                             <input type="text" class="form-control" id="mail" placeholder="Unesite vašu email adresu:" >
                          </div>
                          <div class="alert alert-danger alert-dismissible fade show sakrij" role="alert" id="mail-obavestenje">
                             Uneta email adresa nije u prikladnom formatu, primer: pera.peric@gmail.com, luka.lukic@gmail.com
-                            <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                               <span aria-hidden="true">&times;</span>
-                            </button> -->
                             </div>
-
-                         
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="password" placeholder="Unesite vašu lozinku:">
+                            </div>
+                            <div class="alert alert-danger alert-dismissible fade show sakrij" role="alert" id="pass-obavestenje">
+                                Šifra mora sadržati makar jedno veliko slovo, broj, specijalan karakter i dužine minimalno 8 karaktera.
+                                </div>
                          <select class="form-select" id="lista">
                             <option value="0"selected name="1">Odakle ste?</option>
                             <option value="1" name="1">Beograd</option>
@@ -476,9 +475,6 @@
                           </select>
                           <div id="lista-obavestenje" class="alert alert-danger alert-dismissible fade show sakrij" role="alert">
                             Morate izabrati jedan od ponuđenih gradova!
-                            <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                               <span aria-hidden="true">&times;</span>
-                            </button> -->
                             </div>
                           <div class="form-check">
                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
@@ -494,9 +490,6 @@
                           </div>
                           <div id="pol-radio-obavestenje" class="alert alert-danger alert-dismissible fade show sakrij" role="alert">
                             Morate odabrati pol!
-                            <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                               <span aria-hidden="true">&times;</span>
-                            </button> -->
                             </div>
                           <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="check-button">
@@ -506,36 +499,14 @@
                           </div>
                           <div class="alert alert-danger alert-dismissible fade show sakrij" role="alert" id="check-obavestenje">
                             Morate prihvatiti uslove korišćenja!
-                            <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                               <span aria-hidden="true">&times;</span>
-                            </button> -->
                             </div>
                          <button id="forma-dugme"type="button" class="btn btn-primary">Pošalji</button>
-
                          <div id="uspesno"class="alert alert-success alert-dismissible fade show sakrij" role="alert">
                             Uspešno ste se prijavili. Hvala!
                          </div>
 
                          <div id="loading-plugin" class="sakrij"></div>
 
-                         <!-- <div class="form-group">
-                            <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="Datum rodjenja">
-                         </div> -->
-
-                        <!-- <div class="form-group">
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Name">
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" class="form-control" name="phone" placeholder="Your Phone">
-                        </div>
-                        <div class="form-group">
-                            <input type="datetime-local" class="form-control" name="date">
-                        </div>
-                        <div class="form-group">
-                            <input type="number" class="form-control" name="seats" placeholder="Seats">
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">Book A Table</button>
-                        <small class="form-text text-muted mt-3">We don't span customers. Check our <a href="#">Privacy Policy</a></small> -->
                     </form>
                 </div>
             </div>
@@ -591,7 +562,6 @@
     <script src="assets/js/jquery.shCircleLoader-min.js"></script>
     <script src="assets/js/jquery.shCircleLoader.js"></script>
     <script src="assets/js/loading-circle.js"></script>
-    
     <script src="assets/js/hover-backgroundcolor.js"></script>
 
 </body>
