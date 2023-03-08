@@ -103,6 +103,9 @@ function filtriranjeJelovnik(nizElemenata){
     //lakši i bolji ali nisam želeo da brišem svoj način jer za drugi način sam saznao nakon što sam već sve završio
     //samim tim želeo sam da ostavim svoj kod, iako nije baš najpametniji.
 
+    //što se tiče slika za proizvode, nisam stavio svim objektima svojstvo za sliku jer mi nije trebalo za sve
+    //a i nisam želeo da ubacujem slike koje neću iskoristiti, a generisaće dodatne http requestove.
+
 
     if(document.getElementById("filter-dostava").checked && document.getElementById("filter-sendvici").checked && document.getElementById("filter-pice").checked){
         filtriraniNiz = nizElemenata.filter(el=>el.besplatnaDostava == true);
