@@ -300,7 +300,7 @@ function filterSortReset(){
     this.document.getElementById("filter-sendvici").checked = false
 }
 window.addEventListener("load",function(){
-    if(this.window.location.pathname.includes("index.html") || this.window.location.url == "https://radenovici.github.io/ilija.radenovic.117.21-ict.edu.rs/"){
+    if(this.window.location.pathname.includes("index.html") || this.window.location.pathname == "ilija.radenovic.117.21-ict.edu.rs/"){
         
         filterSortReset();
         //navigacija
