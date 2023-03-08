@@ -300,6 +300,11 @@ function filterSortReset(){
     this.document.getElementById("filter-sendvici").checked = false
 }
 window.addEventListener("load",function(){
+
+    console.log(this.window.location.pathname);
+
+
+
     if(this.window.location.pathname.includes("index.html") || this.window.location.pathname == "/ilija.radenovic.117.21-ict.edu.rs/"){
         filterSortReset();
         //navigacija
