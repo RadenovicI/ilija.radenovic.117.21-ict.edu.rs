@@ -11588,3 +11588,17 @@ section.has-img-bg:after {
 .hover-bakcground{
   background-color: #e6f5e9;
 }
+
+
+#sort-filter{
+  display: flex;
+  justify-content: space-around;
+}
+
+#menu-block{
+  color: #000;
+}
+
+.padding-class{
+  padding-right: 180px
+}

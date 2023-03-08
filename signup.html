@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Pigga landing page.">
+    <meta name="author" content="Devcrud">
+    <link rel="icon" type="image/x-icon" href="assets/imgs/logo.ico">
+    <title>Pizzeria Mamadoo</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + Pigga main styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="assets/css/pigga.css">
+    <link rel="stylesheet" href="assets/css/jquery.shCircleLoader.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <nav class="navbar nav-first navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/imgs/logo.ico" alt="Logo">
+            </a>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <p>Pozovite nas: <span class="pl-2 text-muted">+381 63 4567 890</span></p>
+                </li>                   
+            </ul>
+        </div>
+    </nav>
+    <!-- End of PreFooter Section -->
+
+    <nav class="nav-second navbar custom-navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto" id="navbar-center"> 
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#about">O nama</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#service">Usluge</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Osoblje</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testmonial">Utisci</a>
+                    </li> -->
+                </ul> 
+            </div>
+        </div>
+    </nav>
+
+    <!-- End Of Second Navigation --> 
+    <!-- Page Header -->
+    <header class="header">
+        <div class="overlay" id="header-block">
+            <img src="assets/imgs/logo.jpg" alt="Logo Picerije" class="logo">
+            <h1 class="subtitle">Postanite član</h1>
+            <h1 class="title">Registrujte se kod nas</h1>
+            <!-- <a class="btn btn-primary mt-3"-->
+        </div>      
+    </header>
+    <section id="book-table" class="bg-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col">
+                    <form class="container" id="forma">
+                        <div class="alert alert-info alert-dismissible fade show" role="alert">
+                            Registrujte se i dobijte kupone za svaku kupovinu u našem ambijentu.
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                               <span aria-hidden="true">&times;</span>
+                            </button>
+                         </div>
+                        <div class="form-group">
+                            <input class="form-control" type="text" placeholder="Unesite vaše ime i prezime:"  id="ime">
+                         </div>
+                         <div class="alert alert-danger alert-dismissible fade show sakrij" role="alert" id="ime-obavestenje">
+                            Ime i prezime moraju početi velikim slovom i razmaci mogu postojati samo između imena i prezimena, primer: Pera Perić, Luka Lukić.
+                            </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="mail" placeholder="Unesite vašu email adresu:" >
+                         </div>
+                         <div class="alert alert-danger alert-dismissible fade show sakrij" role="alert" id="mail-obavestenje">
+                            Uneta email adresa nije u prikladnom formatu, primer: pera.peric@gmail.com, luka.lukic@gmail.com
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="password" placeholder="Unesite vašu lozinku:">
+                            </div>
+                            <div class="alert alert-danger alert-dismissible fade show sakrij" role="alert" id="pass-obavestenje">
+                                Šifra mora sadržati makar jedno veliko slovo, broj, specijalan karakter i dužine minimalno 8 karaktera.
+                                </div>
+                         <select class="form-select" id="lista">
+                            <option value="0"selected name="1">Odakle ste?</option>
+                            <option value="1" name="1">Beograd</option>
+                            <option value="2" name="1">Novi Sad</option>
+                            <option value="3" name="1">Pančevo</option>
+                          </select>
+                          <div id="lista-obavestenje" class="alert alert-danger alert-dismissible fade show sakrij" role="alert">
+                            Morate izabrati jedan od ponuđenih gradova!
+                            </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                              Muško
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                              Žensko
+                            </label>
+                          </div>
+                          <div id="pol-radio-obavestenje" class="alert alert-danger alert-dismissible fade show sakrij" role="alert">
+                            Morate odabrati pol!
+                            </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="check-button">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Da li se slažete sa uslovima korišćenja? Obavezno!
+                            </label>
+                          </div>
+                          <div class="alert alert-danger alert-dismissible fade show sakrij" role="alert" id="check-obavestenje">
+                            Morate prihvatiti uslove korišćenja!
+                            </div>
+                         <button id="forma-dugme"type="button" class="btn btn-primary">Pošalji</button>
+                         <div id="uspesno"class="alert alert-success alert-dismissible fade show sakrij" role="alert">
+                            Uspešno ste se prijavili. Hvala!
+                         </div>
+
+                         <div id="loading-plugin" class="sakrij"></div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <div class="py-4 border border-lighter border-bottom-0 border-left-0 border-right-0 bg-dark">
+        <div class="container">
+            <div class="row justify-content-between align-items-center text-center">
+                <div class="col-md-3 text-md-left mb-3 mb-md-0">
+                    <img src="assets/imgs/logo.ico" width="100" alt="Logo" class="mb-0">
+                </div>
+                <div class="col-md-9 text-md-right">
+                    <a href="dokumentacija.pdf" target="_blank" class="px-3"><small class="font-weight-bold">Dokumentacija</small></a>
+                    <a href="about.html" target="_blank" class="pl-3"><small class="font-weight-bold">O autoru</small></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Footer -->
+    <footer class="border border-dark border-left-0 border-right-0 border-bottom-0 p-4 bg-dark">
+        <div class="container">
+            <div class="row align-items-center text-center text-md-left">
+                <div class="col">
+                    <p class="mb-0 small">&copy; <script>document.write(new Date().getFullYear())</script>, <p>Mamadoo, Vuka Karadžića 16, Mladenovac</p> 
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+    <!-- End of Page Footer -->
+
+    <!-- core  -->
+    <script src="assets/js/script.js"></script>
+
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap affix -->
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+     <!--Pigga js -->
+    <script src="assets/js/pigga.js"></script>
+
+    <!-- moj java skript -->
+
+    <script src="assets/js/jquery.shCircleLoader-min.js"></script>
+    <script src="assets/js/jquery.shCircleLoader.js"></script>
+    <script src="assets/js/loading-circle.js"></script>
+    <script src="assets/js/hover-backgroundcolor.js"></script>
+
+</body>
+</html>

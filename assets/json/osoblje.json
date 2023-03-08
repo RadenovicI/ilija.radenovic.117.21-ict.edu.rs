@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "ime": "Marko Marković",
+        "opis": "Pica majstor po struci i malo je reći iskusan u svom poslu. Dodatan rad i iskustvo u inostranstvu doprinosi boljem kvalitetu testa i brzini pripreme svakog jela, a pritom kvalitet i ukus ostaju nenadmašivi",
+        "slika":{
+            "alt":"Pizza Majstor",
+            "src": "assets/imgs/chef-1.jpg"
+        }
+    },
+    {
+        "id": 2,
+        "ime": "Marija Marić",
+        "opis": "Pomoćni radnik ali jednako bitan član našeg kolektiva. Svaki rol-sendvič ima dozu umerenosti, ali i savršenstva zbog njenog truda i želje da svaki bude isti kao i prethodni.",
+        "slika":{
+            "alt":"Pomoćni radnik 1",
+            "src": "assets/imgs/chef-2.jpg"
+        }
+    },
+    {
+        "id": 3,
+        "ime": "Aleksandar Andrić",
+        "opis": "Za razliku od ostalih radnika koji su radili u inostranstvu, naš pomoćni pica majstor se dobro uklapa u rad sa ostatkom radnog osoblja. Još uvek u obuci, ali kompetentan po pitanju veština.",
+        "slika":{
+            "alt":"Pomoćni radnik 2",
+            "src": "assets/imgs/chef-3.jpg"
+        }
+    }
+]

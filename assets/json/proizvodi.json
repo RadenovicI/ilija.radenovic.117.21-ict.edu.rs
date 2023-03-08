@@ -1,0 +1,328 @@
+[
+    {
+        "id":1,
+        "naziv":"El Diablo",
+        "sastojci":"pelat, sir, kulen, feferone, masline, origano",
+        "kategorija": "Pice",
+        "velicina":
+        [
+            {
+                "cm": 32,
+                "cena": 570
+            },
+            {
+                "cm": 50,
+                "cena": 1030
+            }
+        ],
+        "besplatnaDostava":true
+    },
+    {
+        "id":2,
+        "naziv": "Margarita",
+        "src":"assets/imgs/margarita.jpg",
+        "alt":"Margarita",
+        "sastojci":"pelat, sir, masline, origano",
+        "kategorija": "Pice",
+        "velicina":
+        [
+            {
+                "cm": 32,
+                "cena": 470
+            },
+            {
+                "cm": 50,
+                "cena": 800
+            }
+        ]
+    },
+    {
+        "id":3,
+        "src":"assets/imgs/capriciossa.jpg",
+        "alt":"Capricciosa",
+        "naziv": "Capricciosa",
+        "sastojci":"pelat, sir, šunka, pečurke, masline, origano",
+        "kategorija": "Pice",
+        "velicina":
+        [
+            {
+                "cm": 32,
+                "cena": 550
+            },
+            {
+                "cm": 50,
+                "cena": 1010
+            }
+        ],
+        "besplatnaDostava":true
+    },
+    {
+        "id":4,
+        "naziv": "Funghi",
+        "sastojci":"pelat, sir, pečurke, masline, origano",
+        "kategorija": "Pice",
+        "velicina":
+        [
+            {
+                "cm": 32,
+                "cena": 520
+            },
+            {
+                "cm": 50,
+                "cena": 930
+            }
+        ],
+        "besplatnaDostava":true
+    },
+    {
+        "id":5,
+        "naziv": "Vesuvio",
+        "sastojci":"pelat, sir, šunka, masline, origano",
+        "kategorija": "Pice",
+        "velicina":
+        [
+            {
+                "cm": 32,
+                "cena": 530
+            },
+            {
+                "cm": 50,
+                "cena": 980
+            }
+        ]
+    },
+    {
+        "id":6,
+        "naziv": "Srpska",
+        "src" : "assets/imgs/srpska.jpg",
+        "sastojci":"pelat, sir, pančeta, kobasica, šunka, jaje, origano, masline",
+        "kategorija": "Pice",
+        "velicina":
+        [
+            {
+                "cm": 32,
+                "cena": 610
+            },
+            {
+                "cm": 50,
+                "cena": 1150
+            }
+        ],
+        "besplatnaDostava":true
+    },
+    {
+        "id":7,
+        "naziv": "Komšijska",
+        "sastojci":"pelat, sir, šunka,pečenica,kulen,jaje,pavlaka,origano,masline",
+        "kategorija": "Pice",
+        "velicina":
+        [
+            {
+                "cm": 32,
+                "cena": 650
+            },
+            {
+                "cm": 50,
+                "cena": 1150
+            }
+        ]
+    },
+    {
+        "id":8,
+        "naziv": "Carbonara",
+        "sastojci":"sour cream, jaje, pančeta, parmezan, masline",
+        "kategorija": "Pice",
+        "velicina":
+        [
+            {
+                "cm": 32,
+                "cena": 660 
+            },
+            {
+                "cm": 50,
+                "cena": 1150
+            }
+        ],
+        "besplatnaDostava":true
+    },
+    {
+        "id":9,
+        "naziv": "Mamadoo 1",
+        "src" : "assets/imgs/mamadoo1.jpg",
+        "alt" : "Mamadoo 1",
+        "sastojci":"rub punjen fetom i maslinama, pelat ,sir ,šunka ,pančeta, kulen, jaje",
+        "kategorija": "Pice",
+        "velicina":
+        [
+            {
+                "cm": 32,
+                "cena": 780
+            },
+            {
+                "cm": 50,
+                "cena": 1250
+            }
+        ]
+    },
+    {
+        "id":10,
+        "naziv": "Mamadoo 2",
+        "sastojci":"pelat,sir,pečurke,pileći file,pavlaka,masline,origano,paradajz",
+        "kategorija": "Pice",
+        "velicina":
+        [
+            {
+                "cm": 32,
+                "cena": 780
+            },
+            {
+                "cm": 50,
+                "cena": 1250
+            }
+        ]
+    },
+    {
+        "id":11,
+        "naziv": "Pepitto",
+        "sastojci":"pelat, sir, šunka, pečurke, pančeta, feferone, origano,masline",
+        "kategorija": "Pice",
+        "velicina":
+        [
+            {
+                "cm": 32,
+                "cena": 610
+            },
+            {
+                "cm": 50,
+                "cena": 1150
+            }
+        ]
+    },
+    {
+        "id":12,
+        "naziv": "Vegetariana",
+        "sastojci":"pelat, sir, pečurke, paprika, kukuruz, origano, masline",
+        "kategorija": "Pice",
+        "velicina":
+        [
+            {
+                "cm": 32,
+                "cena": 510
+            },
+            {
+                "cm": 50,
+                "cena": 950
+            }
+        ],
+        "besplatnaDostava":true
+    },
+    {
+        "id":13,
+        "naziv": "Italiana",
+        "sastojci":"pelat, sir, pršuta, cherry, rukola, mozzarela, parmezan, masline, origano",
+        "kategorija": "Pice",
+        "velicina":
+        [
+            {
+                "cm": 32,
+                "cena": 790
+            },
+            {
+                "cm": 50,
+                "cena": 1300
+            }
+        ]
+    },
+    {
+        "id":14,
+        "naziv": "Quatro Stagione",
+        "sastojci":"pelat, sir, pečurke, šunka, kulen, pečenica, origano,masline",
+        "kategorija": "Pice",
+        "velicina":
+        [
+            {
+                "cm": 32,
+                "cena": 650
+            },
+            {
+                "cm": 50,
+                "cena": 1150
+            }
+        ]
+    },
+    {
+        "id":15,
+        "naziv": "Tonno",
+        "sastojci":"pelat, sir, tuna, masline, origano",
+        "kategorija": "Pice",
+        "velicina":
+        [
+            {
+                "cm": 32,
+                "cena": 530
+            },
+            {
+                "cm": 50,
+                "cena": 1010
+            }
+        ]
+    },
+    {
+        "id":16,
+        "naziv": "Mamadoo 1",
+        "src" : "/assets/imgs/piletina.jpg",
+        "alt":"Mamadoo 1",
+        "sastojci":"susam namaz, pileći file, sir, krastavčići",
+        "kategorija": "Sendviči",
+        "cena" : 320,
+        "besplatnaDostava":true
+    },
+    {
+        "id":17,
+        "naziv": "Pečenica",
+        "src":"/assets/imgs/pecenica.jpg",
+        "alt":"Pečenica",
+        "sastojci":"namaz, pečenica, sir, krastavčići",
+        "kategorija": "Sendviči",
+        "cena" : 200,
+        "besplatnaDostava":true
+    },
+    {
+        "id":18,
+        "naziv": "Kulen",
+        "sastojci":"namaz, kulen, sir, krastavčići",
+        "kategorija": "Sendviči",
+        "cena" : 210,
+        "besplatnaDostava":true
+    },
+    {
+        "id":19,
+        "naziv": "Šunka",
+        "sastojci":"namaz, šunka, sir, krastavčići",
+        "kategorija": "Sendviči",
+        "cena" : 180
+    },
+    {
+        "id":20,
+        "naziv": "Mix",
+        "sastojci":"namaz, šunka, pečenica, kulen, sir, krastavčići",
+        "cena" : 250
+    },
+    {
+        "id":21,
+        "naziv": "Burger rol",
+        "src" : "/assets/imgs/burger.jpg",
+        "alt":"Burger rol",
+        "sastojci":"burger sos, junetina, pančeta, sir, ljubičasti luk, iceberg, paradajz, krastavčići, kečap",
+        "kategorija": "Sendviči",
+        "cena" : 350,
+        "besplatnaDostava":true
+    },
+    {
+        "id":22,
+        "naziv": "Slaninica",
+        "sastojci":"pavlaka, slanina, sir, kuvano jaje, paradajz",
+        "kategorija": "Sendviči",
+        "cena" : 300
+    }
+]

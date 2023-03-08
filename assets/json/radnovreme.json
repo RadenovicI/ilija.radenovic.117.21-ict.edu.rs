@@ -1,0 +1,17 @@
+[
+    {
+        "dani": "Ponedeljak-Petak",
+        "pocetakRadnogVremena":"08:00",
+        "krajRadnogVremena":"23:00"
+    },
+    {
+        "dani":"Subota",
+        "pocetakRadnogVremena": "12:00",
+        "krajRadnogVremena": "00:00"
+    },
+    {
+        "dani":"Nedelja",
+        "pocetakRadnogVremena": "Zatvoreno",
+        "krajRadnogVremena" : ""
+    }
+]
