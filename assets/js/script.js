@@ -299,10 +299,8 @@ function filterSortReset(){
     this.document.getElementById("filter-pice").checked = false
     this.document.getElementById("filter-sendvici").checked = false
 }
-console.log(window.location.pathname)
 window.addEventListener("load",function(){
-    if(this.window.location.pathname.includes("index.html") || this.window.location.pathname == "/"){
-        
+    if(this.window.location.pathname.includes("index.html") || this.window.location.pathname == ""){
         filterSortReset();
         //navigacija
         dohvatanjeJsonPodataka("navigacija.json",function(niz){
