@@ -98,6 +98,12 @@ function featured(nizObjekata){
 function filtriranjeJelovnik(nizElemenata){
     let filtriraniNiz = [];
 
+    //svestan sam da ovaj način nije optimizovan i da svakako postoji mnogo bolji način za filtriranje, ali 
+    //kada sam radio ovaj deo u tom trenutku mi je ovako nešto palo na pamet. Drugi način sa :checked proverom je
+    //lakši i bolji ali nisam želeo da brišem svoj način jer za drugi način sam saznao nakon što sam već sve završio
+    //samim tim želeo sam da ostavim svoj kod, iako nije baš najpametniji.
+
+
     if(document.getElementById("filter-dostava").checked && document.getElementById("filter-sendvici").checked && document.getElementById("filter-pice").checked){
         filtriraniNiz = nizElemenata.filter(el=>el.besplatnaDostava == true);
     }
