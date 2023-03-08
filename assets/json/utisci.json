@@ -1,0 +1,32 @@
+[
+    {
+        "slika":{
+            "src":"assets/imgs/avatar.jpg",
+            "alt":"Mušterija 1"
+        },
+        "ime":"Jovan",
+        "prezime":"Jović",
+        "zanimanje":"Preduzetnik",
+        "tekst":"Pice, kao nigde drugde. Testo je savršeno i uvek je sveže. Sve pohvale za ljubaznost osoblja i veoma dobru angažovanost."
+    },
+    {
+        "slika":{
+            "src":"assets/imgs/avatar-1.jpg",
+            "alt":"Mušterija 2"
+        },
+        "ime":"Jelena",
+        "prezime":"Jelić",
+        "zanimanje":"Programer",
+        "tekst":"Nakon napornog dana na poslu, uvek mi prija dobra hrana, a za ovakve pice malo je reći da su dobre. Rol sendviči, takođe, odlični i sočni."
+    },
+    {
+        "slika":{
+            "src":"assets/imgs/avatar-2.jpg",
+            "alt":"Mušterija 3"
+        },
+        "ime":"Milan",
+        "prezime":"Jovanović",
+        "zanimanje":"Trgovac",
+        "tekst":"Živim malo dalje od njih ali nikad mi nije bio problem da se malo provozam da utolim glad savršenim rol sendvičima."
+    }
+]

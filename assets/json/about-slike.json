@@ -1,0 +1,18 @@
+[
+    {
+        "alt": "Pica",
+        "src": "assets/imgs/pizza.jpg"
+    },
+    {
+        "alt": "Hot Dog",
+        "src": "assets/imgs/hotdog.jpg"
+    },
+    {
+        "alt": "Sendvic - otvoren",
+        "src": "assets/imgs/sandwich-open.jpg"
+    },
+    {
+        "alt": "Sendvic",
+        "src": "assets/imgs/sandwich.jpg"
+    }
+]
