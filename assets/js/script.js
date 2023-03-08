@@ -300,7 +300,7 @@ function filterSortReset(){
     this.document.getElementById("filter-sendvici").checked = false
 }
 window.addEventListener("load",function(){
-    if(this.window.location.pathname.includes("index.html")){
+    if(this.window.location.pathname.includes("index.html") || this.window.location.pathname == "/"){
         
         filterSortReset();
         //navigacija
